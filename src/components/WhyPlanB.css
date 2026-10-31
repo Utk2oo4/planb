@@ -1,0 +1,294 @@
+/* ─── Why PlanB Section ─────────────────────────────────────────────────── */
+.why {
+  background: #F7F5EF;
+  padding: 88px 24px;
+}
+
+.why__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────── */
+.why__header {
+  text-align: center;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.why__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #555555;
+  margin: 0;
+}
+
+.why__eyebrow-rule {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #FFD52F;
+  border-radius: 2px;
+}
+
+.why__headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: #111111;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.why__highlight {
+  background: #FFD52F;
+  color: #111111;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-style: normal;
+}
+
+.why__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #555555;
+  margin: 0;
+}
+
+/* ─── Benefit Cards ─────────────────────────────────────────────────────── */
+.why__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 48px;
+  list-style: none;
+  padding: 0;
+}
+
+.why__card {
+  background: #ffffff;
+  border: 1px solid #E5E2DA;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.18s, transform 0.15s;
+}
+
+.why__card:hover {
+  border-color: #c8c4bb;
+  transform: translateY(-3px);
+}
+
+.why__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: #FFF0B0;
+  border-radius: 50%;
+  color: #111111;
+  flex-shrink: 0;
+}
+
+.why__card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.why__card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Who is PlanB for? ─────────────────────────────────────────────────── */
+.why__who-header {
+  width: 100%;
+  margin-top: 72px;
+}
+
+.why__who-headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Persona cards — icon left-aligned, text beside */
+.why__cards--persona {
+  margin-top: 24px;
+}
+
+.why__card--persona {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 28px;
+}
+
+.why__card--persona .why__card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.why__card--persona .why__card-title {
+  font-size: 1rem;
+}
+
+/* ─── Footer link ───────────────────────────────────────────────────────── */
+.why__footer {
+  margin-top: 48px;
+}
+
+.why__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 2px solid #FFD52F;
+  padding-bottom: 2px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.why__link:hover {
+  color: #555555;
+  border-color: #111111;
+}
+
+.why__link:focus-visible {
+  outline: 2px solid #FFD52F;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.why__mobile-hint {
+  display: none;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .why {
+    padding: 64px 24px;
+  }
+
+  .why__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why__card--persona {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why {
+    padding: 56px 20px;
+    overflow: hidden;
+  }
+
+  .why__mobile-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888888;
+    background: #ffffff;
+    border: 1px solid #E5E2DA;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-top: 24px;
+  }
+
+  /* ── Swipeable Benefit Cards ── */
+  .why__cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    width: calc(100% + 40px);
+    margin: 16px -20px 0;
+    padding: 8px 20px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .why__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why__card {
+    flex: 0 0 82%;
+    max-width: 310px;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  }
+
+  .why__who-header {
+    margin-top: 52px;
+  }
+
+  /* ── Swipeable Persona Cards ── */
+  .why__cards--persona {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    width: calc(100% + 40px);
+    margin: 16px -20px 0;
+    padding: 8px 20px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .why__cards--persona::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why__card--persona {
+    flex: 0 0 84%;
+    max-width: 320px;
+    scroll-snap-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .why__card {
+    transition: none;
+  }
+}

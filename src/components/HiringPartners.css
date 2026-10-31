@@ -1,0 +1,288 @@
+/* ─── Hiring Partners — Marquee Scroll Strip ─────────────────────────────── */
+.hiring {
+  background: #F7F5EF;
+  padding: 88px 0;
+  overflow: hidden;
+}
+
+.hiring__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.hiring__header {
+  text-align: center;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.hiring__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #555555;
+  margin: 0;
+}
+
+.hiring__headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: #111111;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.hiring__highlight {
+  background: #FFD52F;
+  color: #111111;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-style: normal;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.hiring__highlight--inline {
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.hiring__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #555555;
+  margin: 0;
+  max-width: 780px;
+}
+
+/* ─── Marquee wrapper ────────────────────────────────────────────────────── */
+.hiring__marquee-wrapper {
+  position: relative;
+  width: 100vw;          /* bleed full viewport width */
+  margin-left: calc(50% - 50vw);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  /* pause on hover so users can read logos */
+}
+
+.hiring__marquee-wrapper:hover .hiring__marquee-track {
+  animation-play-state: paused;
+}
+
+/* ─── Fade-edge overlays ─────────────────────────────────────────────────── */
+.hiring__marquee-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hiring__marquee-fade--left {
+  left: 0;
+  background: linear-gradient(to right, #F7F5EF 0%, transparent 100%);
+}
+
+.hiring__marquee-fade--right {
+  right: 0;
+  background: linear-gradient(to left, #F7F5EF 0%, transparent 100%);
+}
+
+/* ─── Marquee track (scrolling row) ──────────────────────────────────────── */
+.hiring__marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marquee-scroll-left 32s linear infinite;
+  will-change: transform;
+}
+
+.hiring__marquee-track--reverse {
+  animation-name: marquee-scroll-right;
+  animation-duration: 28s;
+}
+
+@keyframes marquee-scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.3333%); }
+}
+
+@keyframes marquee-scroll-right {
+  from { transform: translateX(-33.3333%); }
+  to   { transform: translateX(0); }
+}
+
+/* ─── Individual logo card ───────────────────────────────────────────────── */
+.hiring__marquee-card {
+  background: #ffffff;
+  border: 1px solid #E5E2DA;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 28px;
+  min-width: 160px;
+  height: 110px;
+  flex-shrink: 0;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.hiring__marquee-card:hover {
+  border-color: #FFD52F;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.hiring__marquee-img {
+  max-width: 110px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hiring__marquee-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #555555;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ─── Accessible hidden list ─────────────────────────────────────────────── */
+.hiring__sr-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+/* ─── Closing Statement ──────────────────────────────────────────────────── */
+.hiring__closing {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.hiring__closing-rule {
+  flex: 1;
+  height: 1px;
+  background: #E5E2DA;
+}
+
+.hiring__closing-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #111111;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  max-width: 680px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 780px) {
+  .hiring {
+    padding: 64px 0;
+  }
+
+  .hiring__marquee-card {
+    min-width: 130px;
+    height: 90px;
+    padding: 14px 18px;
+  }
+
+  .hiring__marquee-img {
+    max-height: 42px;
+    max-width: 90px;
+  }
+
+  .hiring__marquee-fade {
+    width: 60px;
+  }
+
+  .hiring__closing-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hiring {
+    padding: 48px 0;
+  }
+
+  .hiring__marquee-card {
+    min-width: 110px;
+    height: 80px;
+    padding: 12px 14px;
+    gap: 6px;
+  }
+
+  .hiring__marquee-img {
+    max-height: 36px;
+    max-width: 76px;
+  }
+
+  .hiring__marquee-label {
+    font-size: 0.65rem;
+  }
+
+  .hiring__closing {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .hiring__closing-rule {
+    width: 60px;
+    flex: none;
+  }
+}
+
+/* ─── Reduced motion — stop animation ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hiring__marquee-track {
+    animation: none;
+  }
+
+  /* Show as a simple wrapping row instead */
+  .hiring__marquee-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hiring__marquee-track {
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+  }
+}

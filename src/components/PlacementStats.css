@@ -1,0 +1,260 @@
+/* ─── Placement Stats Section ────────────────────────────────────────────── */
+.pstat {
+  background: #111111;
+  padding: 96px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle yellow glow blob — purely decorative */
+.pstat::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640px;
+  height: 320px;
+  background: radial-gradient(ellipse at center, rgba(255, 213, 47, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pstat__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.pstat__header {
+  text-align: center;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.pstat__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFD52F;
+  margin: 0;
+}
+
+.pstat__headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.pstat__highlight {
+  background: #FFD52F;
+  color: #111111;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-style: normal;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.pstat__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #aaaaaa;
+  margin: 0;
+}
+
+/* ─── Stats grid ─────────────────────────────────────────────────────────── */
+.pstat__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ─── Stat card ──────────────────────────────────────────────────────────── */
+.pstat__card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+/* Yellow left accent bar */
+.pstat__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #FFD52F;
+  border-radius: 20px 0 0 20px;
+}
+
+.pstat__card:hover {
+  border-color: #FFD52F;
+  transform: translateY(-4px);
+}
+
+/* ─── Icon ───────────────────────────────────────────────────────────────── */
+.pstat__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 213, 47, 0.12);
+  border-radius: 14px;
+  color: #FFD52F;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+/* ─── Animated number ────────────────────────────────────────────────────── */
+.pstat__value {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.6rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.pstat__suffix {
+  font-size: 0.55em;
+  font-weight: 800;
+  color: #FFD52F;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+/* ─── Label & description ────────────────────────────────────────────────── */
+.pstat__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pstat__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #888888;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ─── Disclaimer ─────────────────────────────────────────────────────────── */
+.pstat__disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: #555555;
+  text-align: center;
+  margin-top: 48px;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.pstat__mobile-hint {
+  display: none;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .pstat__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pstat {
+    padding: 64px 20px;
+    overflow: hidden;
+  }
+
+  .pstat__header {
+    margin-bottom: 24px;
+  }
+
+  .pstat__mobile-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #FFD52F;
+    background: rgba(255, 213, 47, 0.12);
+    border: 1px solid rgba(255, 213, 47, 0.3);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  /* ── Mobile Horizontal Swipe Track ── */
+  .pstat__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    padding: 8px 20px 24px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .pstat__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pstat__card {
+    flex: 0 0 78%;
+    max-width: 290px;
+    scroll-snap-align: center;
+    padding: 28px 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .pstat__value {
+    font-size: 2.5rem;
+  }
+}
+
+/* ─── Reduced motion — freeze counter at final value ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pstat__card {
+    transition: none;
+  }
+}

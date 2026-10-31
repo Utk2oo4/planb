@@ -1,0 +1,373 @@
+/* ─── Is PlanB For You Section ──────────────────────────────────────────── */
+.foryou {
+  background: #F7F5EF;
+  padding: 88px 24px;
+}
+
+.foryou__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.foryou__header {
+  text-align: center;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.foryou__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #555555;
+  margin: 0;
+}
+
+.foryou__eyebrow-rule {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #FFD52F;
+  border-radius: 2px;
+}
+
+.foryou__headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: #111111;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.foryou__highlight {
+  background: #FFD52F;
+  color: #111111;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-style: normal;
+}
+
+.foryou__highlight--inline {
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.foryou__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #555555;
+  margin: 0;
+}
+
+/* ─── Two Cards ──────────────────────────────────────────────────────────── */
+.foryou__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-top: 48px;
+}
+
+/* ─── Card base ──────────────────────────────────────────────────────────── */
+.foryou__card {
+  background: #ffffff;
+  border: 1px solid #E5E2DA;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* "For you" card gets a subtle yellow top accent */
+.foryou__card--yes {
+  border-top: 4px solid #FFD52F;
+}
+
+.foryou__card--no {
+  border-top: 4px solid #E5E2DA;
+}
+
+/* ─── Card header row ────────────────────────────────────────────────────── */
+.foryou__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.foryou__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.foryou__card-icon--x {
+  background: #FFF0B0;
+  color: #111111;
+}
+
+.foryou__card-icon--check {
+  background: #FFD52F;
+  color: #111111;
+}
+
+.foryou__card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+  margin: 0;
+  padding-top: 6px;
+}
+
+.foryou__underline {
+  text-decoration: underline;
+  text-decoration-color: #FFD52F;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ─── List ───────────────────────────────────────────────────────────────── */
+.foryou__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.foryou__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.foryou__bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.foryou__bullet--x {
+  background: #F7F5EF;
+  border: 1px solid #E5E2DA;
+  color: #111111;
+}
+
+.foryou__bullet--check {
+  background: #FFF0B0;
+  color: #111111;
+}
+
+/* ─── Closing ────────────────────────────────────────────────────────────── */
+.foryou__closing {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 56px;
+  width: 100%;
+  max-width: 920px;
+}
+
+.foryou__closing-rule {
+  flex: 1;
+  height: 1px;
+  background: #E5E2DA;
+}
+
+.foryou__closing-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ─── CTA ────────────────────────────────────────────────────────────────── */
+.foryou__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 32px;
+  background: #FFD52F;
+  color: #111111;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 700;
+  padding: 0 28px;
+  height: 52px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.foryou__cta:hover {
+  background: #f0c800;
+  transform: translateY(-2px);
+}
+
+.foryou__cta:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* ─── Mobile Interactive Elements ───────────────────────────────────────── */
+.foryou__mobile-tabs {
+  display: none;
+}
+
+.foryou__mobile-hint {
+  display: none;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .foryou {
+    padding: 64px 24px;
+  }
+
+  .foryou__closing-text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .foryou {
+    padding: 56px 20px;
+    overflow: hidden;
+  }
+
+  /* ── Interactive Switcher Tabs on Mobile ── */
+  .foryou__mobile-tabs {
+    display: flex;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #E5E2DA;
+    padding: 4px;
+    border-radius: 999px;
+    margin-top: 28px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .foryou__tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .foryou__tab--active {
+    background: #FFD52F;
+    color: #111111;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(255, 213, 47, 0.35);
+  }
+
+  /* ── Horizontal Scroll-Snap Card Track ── */
+  .foryou__cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    width: calc(100% + 40px);
+    margin: 20px -20px 0;
+    padding: 8px 20px 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .foryou__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .foryou__card {
+    flex: 0 0 88%;
+    max-width: 340px;
+    scroll-snap-align: center;
+    padding: 24px 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .foryou__mobile-hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888888;
+    background: #ffffff;
+    border: 1px solid #E5E2DA;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-top: 14px;
+  }
+
+  .foryou__closing {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .foryou__closing-rule {
+    width: 60px;
+    flex: none;
+  }
+
+  .foryou__closing-text {
+    font-size: 0.98rem;
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .foryou__cta {
+    transition: none;
+  }
+}
