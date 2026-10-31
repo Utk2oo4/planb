@@ -1,6 +1,6 @@
-# CSEWhy | PlanB
+# UPSC | PlanB
 
-A clean, modern, and credible education and career platform designed for UPSC aspirants. **CSEWhy PlanB** helps civil services aspirants build practical, career-ready skills alongside their preparation in AI, public policy, research, consulting, and communications without putting their future on hold.
+A clean, modern, and credible education and career platform designed for UPSC aspirants. **UPSC PlanB** helps civil services aspirants build practical, career-ready skills alongside their preparation in AI, public policy, research, consulting, and communications without putting their future on hold.
 
 > **"UPSC is your goal. Your future deserves a Plan B."**
 

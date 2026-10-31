@@ -26,18 +26,12 @@
   flex-shrink: 0;
 }
 
-.navbar__logo-cse {
+.navbar__logo-text {
   font-family: 'Inter', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #111111;
   letter-spacing: -0.02em;
-}
-
-.navbar__logo-divider {
-  color: #E5E2DA;
-  font-weight: 300;
-  font-size: 1.2rem;
 }
 
 .navbar__logo-planb {

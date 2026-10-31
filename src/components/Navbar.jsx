@@ -16,9 +16,8 @@ export default function Navbar() {
     <header className="navbar" role="banner">
       <div className="navbar__inner">
         {/* Logo */}
-        <a href="#home" className="navbar__logo" aria-label="CSEWhy PlanB home">
-          <span className="navbar__logo-cse">CSEWhy</span>
-          <span className="navbar__logo-divider" aria-hidden="true">|</span>
+        <a href="#home" className="navbar__logo" aria-label="UPSC PlanB home">
+          <span className="navbar__logo-text">UPSC</span>
           <span className="navbar__logo-planb">PlanB</span>
         </a>
 
