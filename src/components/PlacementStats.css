@@ -252,6 +252,27 @@
   }
 }
 
+/* ─── Small Phone (<= 480px) ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .pstat {
+    padding: 48px 16px;
+  }
+
+  .pstat__card {
+    flex: 0 0 84%;
+    max-width: 270px;
+    padding: 24px 18px;
+  }
+
+  .pstat__value {
+    font-size: 2.2rem;
+  }
+
+  .pstat__label {
+    font-size: 0.95rem;
+  }
+}
+
 /* ─── Reduced motion — freeze counter at final value ────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .pstat__card {

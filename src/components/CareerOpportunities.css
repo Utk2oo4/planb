@@ -258,6 +258,23 @@
   }
 }
 
+/* ─── Small Phone (<= 480px) ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .careers {
+    padding: 48px 16px;
+  }
+
+  .careers__headline {
+    font-size: 1.75rem;
+  }
+
+  .careers__card {
+    flex: 0 0 90%;
+    max-width: 300px;
+    padding: 20px 16px;
+  }
+}
+
 /* ─── Reduced motion ─────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .careers__card {

@@ -199,7 +199,7 @@
   }
 
   .why__cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .why__card--persona {
@@ -283,6 +283,27 @@
     flex-direction: row;
     align-items: flex-start;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* ─── Small Phone (<= 480px) ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .why {
+    padding: 48px 16px;
+  }
+
+  .why__card {
+    flex: 0 0 88%;
+    max-width: 300px;
+  }
+
+  .why__card--persona {
+    flex: 0 0 90%;
+    max-width: 300px;
+  }
+
+  .why__who-headline {
+    font-size: 1.6rem;
   }
 }
 

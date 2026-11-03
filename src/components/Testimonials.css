@@ -260,6 +260,14 @@
     padding: 48px 0;
   }
 
+  .testi__inner {
+    padding: 0 16px;
+  }
+
+  .testi__header {
+    margin-bottom: 36px;
+  }
+
   .testi__card {
     width: 260px;
     padding: 18px 16px 14px;

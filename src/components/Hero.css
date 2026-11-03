@@ -538,6 +538,38 @@
   }
 }
 
+/* ─── Small Phone Breakpoint (<= 480px) ─────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero__container {
+    padding: 36px 16px 40px;
+  }
+
+  .hero__headline {
+    font-size: 2rem;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.72rem;
+  }
+
+  .hero__copy {
+    font-size: 0.95rem;
+  }
+
+  .hero__btn {
+    font-size: 0.9rem;
+    height: 46px;
+  }
+
+  .hero__stat-col {
+    flex: 0 0 82%;
+  }
+
+  .hero__benefit-col {
+    flex: 0 0 85%;
+  }
+}
+
 /* ─── Reduced Motion ────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .hero__btn,

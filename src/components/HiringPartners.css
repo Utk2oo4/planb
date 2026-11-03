@@ -240,6 +240,14 @@
     padding: 48px 0;
   }
 
+  .hiring__inner {
+    padding: 0 16px;
+  }
+
+  .hiring__header {
+    margin-bottom: 36px;
+  }
+
   .hiring__marquee-card {
     min-width: 110px;
     height: 80px;
